@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>This is made by Mian Faheem Hussain</header>
+
+    <h1>Extracted Template</h1>
+
+    <pre style="white-space: pre-wrap; font-size: 16px;">
+        {{ text }}
+    </pre>
+
+    <form action="/summary" method="POST">
+        <input type="hidden" name="extracted_text" value="{{ text }}">
+        <button type="submit">Generate Summary</button>
+
+    </form>
+
+    <a href="/">Back</a></pre>
+</body>
+
+</html>

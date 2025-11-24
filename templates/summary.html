@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Summary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <h2>PDF Summary</h2>
+
+    <p style="font-size: 18px; white-space: pre-wrap;">
+        {{ summary }}
+    </p>
+
+    <a href="/">Upload Another PDF</a>
+
+</body>
+</html>

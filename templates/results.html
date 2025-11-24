@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Summary</h1>
+    <p>{{ summary }}</p>
+  </div class="container">
+  <h2>Ask a Question</h2>
+  <input type="text" id="question" placeholder="Type your question here">
+  <button onclick="askQuestion()">Ask</button>
+
+  <div id="answer"></div>
+
+    <script>
+      async function askQuestion() {
+        const question = document.getElementById("question").value;
+        if (!question) return;
+
+        const response = await fetch("/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ doc_id: "{{ doc_id }}", question })
+        });
+        const data = await response.json();
+        document.getElementById("answer").innerText = data.answer || data.error;
+      }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+/* ======================
+   Global Styles
+====================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    color: #2f3640;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 2px solid #071036;
+}
+
+/* ======================
+   Card Layout
+====================== */
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    padding: 25px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* ======================
+   Headings
+====================== */
+h1, h2, h3 {
+    text-align: center;
+    color: #2f3640;
+    margin-bottom: 20px;
+}
+
+/* ======================
+   Upload Form
+====================== */
+input[type="file"], input[type="text"] {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0 20px 0;
+    font-size: 16px;
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #40739e;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #374d70;
+    transform: translateY(-2px);
+}
+
+/* ======================
+   Summary & Answer Sections
+====================== */
+.summary-card, .qa-card, .answer-box {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.summary-card {
+    border-left: 6px solid #40739e;
+}
+
+.qa-card {
+    border-left: 6px solid #44bd32;
+}
+
+.answer-box {
+    border-left: 5px solid #44bd32;
+    background-color: #f1f2f6;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    line-height: 1.6;
+    display: none; /* hidden by default, shown dynamically */
+}
+
+/* ======================
+   Q&A Form
+====================== */
+.qa-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.qa-form input[type="text"] {
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+}
+
+.qa-form button {
+    align-self: flex-start;
+    background-color: #44bd32;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.qa-form button:hover {
+    background-color: #2f9e1f;
+    transform: translateY(-2px);
+}
+
+/* ======================
+   Hover Effects
+====================== */
+.summary-card:hover, .qa-card:hover, .answer-box:hover {
+    background-color: #f5f6fa;
+}
+
+/* ======================
+   Responsive Design
+====================== */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    button, .qa-form button {
+        width: 100%;
+    }
+}
